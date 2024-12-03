@@ -1,0 +1,29 @@
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+         <img id="logo" src="/images/logo.png" alt="Web Bank Logo">
+        <div class="container">
+            
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/banking">Banking</a>
+                    </li>
+                   
+                    {{#if username}}
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">
+                                {{username}}
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="/logout">Logout</a>
+                            </div>
+                        </li>
+                    {{/if}}
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>

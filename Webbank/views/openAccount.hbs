@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Bank - Open Account</title>
+    <link rel="stylesheet" href="/css/style.css"> 
+</head>
+<body>
+        {{> header }}
+
+    <div class="centered-container">
+        <div class="open-account-box">
+            <h2>Open an Account</h2>
+            
+            <form action="E:\Webbank\views\openAccount.hbs" method="POST" class="open-account-form">
+                <!-- Account Holder's Name -->
+                <div class="form-group">
+                    <label for="accountName">Account Holder's Name</label>
+                    <input type="text" id="accountName" name="accountName" placeholder="Enter full name" required>
+                </div>
+                
+                <!-- Username -->
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" placeholder="Choose a username" required>
+                </div>
+                
+                <!-- Password -->
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Create a password" required>
+                </div>
+                
+                <!-- Account Type Selection -->
+                <div class="form-group">
+                    <label for="accountType">Account Type</label>
+                    <select id="accountType" name="accountType" required>
+                        <option value="savings">Savings</option>
+                        <option value="chequing">Chequing</option>
+                    </select>
+                </div>
+
+                <!-- Initial Deposit -->
+                <div class="form-group">
+                    <label for="initialDeposit">Initial Deposit</label>
+                    <input type="number" id="initialDeposit" name="initialDeposit" placeholder="Enter initial deposit amount" step="0.01" min="0" required>
+                </div>
+                
+                <!-- Submit and Cancel Buttons -->
+                <button type="submit">Open Account</button>
+                <button type="button" onclick="window.location.href='/banking'">Cancel</button>
+            </form>
+        </div>
+    </div>
+    {{> footer}}
+
+</body>
+</html>  

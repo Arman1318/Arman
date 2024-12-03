@@ -1,0 +1,13 @@
+{{> header}}
+<div class="centered-container">
+    <div class="balance-box">
+        <h1>Account Balance</h1>
+        <p><strong>Account Number:</strong> {{accountNumber}}</p>
+        <p><strong>Account Type:</strong> {{accountType}}</p>
+        <p><strong>Current Balance:</strong> ${{balance}}</p>
+        <button onclick="window.location.href='/banking'">Back to Banking</button>
+    </div>
+    <a href="/logout" class="btn btn-danger">Logout</a>
+
+</div>
+{{> footer}}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Bank - Banking Dashboard</title>
+    <link rel="stylesheet" href="/css/style.css"> 
+</head>
+<body>
+
+        {{> header }}
+
+    <div class="centered-container">
+        <div class="dashboard-box">
+            <h1>Banking Dashboard</h1>
+            <p>Welcome, {{username}}!</p>
+
+            <form action="/banking-action" method="POST" class="banking-form">
+                <div class="form-group">
+                    <input type="radio" name="action" value="balance" id="balance" required> 
+                    <label for="balance">Check Balance</label><br>
+
+                    <input type="radio" name="action" value="deposit" id="deposit">
+                    <label for="deposit">Deposit</label><br>
+
+                    <input type="radio" name="action" value="withdraw" id="withdraw">
+                    <label for="withdraw">Withdraw</label><br>
+
+                    <input type="radio" name="action" value="open" id="open">
+                    <label for="open">Open an Account</label><br>
+                </div>
+
+                <div class="form-group">
+                    <label for="accountNumber">Account Number:</label>
+                    <input type="text" id="accountNumber" name="accountNumber">
+                </div>
+
+                <button type="submit">Submit</button>
+            </form>
+
+            {{#if message}}
+                <p>{{message}}</p>
+            {{/if}}
+        </div>
+    </div>
+    {{> footer}}
+
+</body>
+</html>
